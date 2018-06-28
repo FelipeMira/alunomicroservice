@@ -1,0 +1,19 @@
+  mongo:
+    image: mongo
+    restart: always
+    hostname: mongodb
+    command: mongod --port 8081
+    ports:
+      - 8081:8081
+
+  java8:
+    image: openjdk:8-jre
+    ports:
+    - "8086:8086"
+    volumes:
+    - "/Users/felipemira/Spring-Workspace/aluno/target:/usr/src/myapp"
+    working_dir: /usr/src/myapp
+    command: java -jar aluno.jar
+    links:
+    - mongo
+    
