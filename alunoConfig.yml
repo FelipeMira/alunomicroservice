@@ -1,4 +1,4 @@
-  mongo:
+  mongoAluno:
     image: mongo
     restart: always
     hostname: mongodb
@@ -6,7 +6,7 @@
     ports:
       - 8081:8081
 
-  java8:
+  java8Aluno:
     image: openjdk:8-jre
     ports:
     - "8086:8086"
@@ -15,5 +15,5 @@
     working_dir: /usr/src/myapp
     command: java -jar aluno.jar
     links:
-    - mongo
+    - mongoAluno
     
