@@ -12,7 +12,7 @@ import org.springframework.test.context.ContextConfiguration;
 import com.fiap.grupo.dois.AlunoApplication;
 
 @SpringBootTest(classes = AlunoApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-@ActiveProfiles("INTEGRATION_TEST")
+@ActiveProfiles("test")
 @ContextConfiguration
 public class CucumberRoot {
 
